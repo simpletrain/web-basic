@@ -1,6 +1,7 @@
 var data = require('../seed/data.json');
 var TopicFactory = require('../models/factory.js');
 var getInputs = require('../models/get-inputs');
+var Score = require('../models/score');
 
 function HomeController(){
 
@@ -43,7 +44,8 @@ HomeController.prototype.firstCall = function(req,res){
         class_name : '',
         id_number : '',
         student_name : '',
-        allTopic : allTopic
+        allTopic : allTopic,
+        score : ''
     });
 };
 
@@ -84,13 +86,18 @@ HomeController.prototype.secondCall = function(req,res){
 
     console.log(allTopic);
 
+    var score = new Score();
+
+    score.markAll(allTopic);
+
 
     res.render('index',{
         title : title,
         class_name : originInput.class_name,
         id_number : originInput.id_number,
         student_name : originInput.student_name,
-        allTopic : allTopic
+        allTopic : allTopic,
+        score : score.score
     });
 };
 
