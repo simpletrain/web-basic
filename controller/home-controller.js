@@ -1,11 +1,17 @@
+var data = require('../seed/data.json');
+
 function HomeController(){
 
 }
 
 
 HomeController.prototype.firstCall = function(req,res){
-    res.render('index',{
+    var title = data.title;
 
+
+
+    res.render('index',{
+        title:title
     });
 };
 
