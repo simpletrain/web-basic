@@ -115,7 +115,7 @@
             <li>
                 <p><%= allTopic.subjective[i].question %></p>
                 <textarea name=<%= allTopic.subjective[i].type + i %>
-                          cols="80" rows="10"><% if(allTopic.subjective[i].input) {allTopic.subjective[i].input} %></textarea>
+                          cols="80" rows="10"><% if(allTopic.subjective[i].input) { %><%= allTopic.subjective[i].input %><% } %></textarea>
             </li>
             <% } %>
         </ol>

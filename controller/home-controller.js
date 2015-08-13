@@ -1,5 +1,6 @@
 var data = require('../seed/data.json');
 var TopicFactory = require('../models/factory.js');
+var getInputs = require('../models/get-inputs');
 
 function HomeController(){
 
@@ -35,7 +36,6 @@ HomeController.prototype.firstCall = function(req,res){
 
 
     console.log(allTopic);
-
 
 
     res.render('index',{
@@ -80,13 +80,16 @@ HomeController.prototype.secondCall = function(req,res){
 
     console.log(originInput);
 
+    allTopic = getInputs(originInput,allTopic);
+
+    console.log(allTopic);
 
 
     res.render('index',{
         title : title,
-        class_name : '',
-        id_number : '',
-        student_name : '',
+        class_name : originInput.class_name,
+        id_number : originInput.id_number,
+        student_name : originInput.student_name,
         allTopic : allTopic
     });
 };
