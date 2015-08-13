@@ -1,0 +1,24 @@
+{
+  "name": "web-basic",
+  "version": "0.2.0",
+  "description": "nope",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simpletrain/web-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simpletrain/web-basic/issues"
+  },
+  "homepage": "https://github.com/simpletrain/web-basic#readme",
+  "dependencies": {
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1"
+  }
+}
