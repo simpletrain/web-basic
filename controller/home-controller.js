@@ -33,12 +33,17 @@ HomeController.prototype.firstCall = function(req,res){
         }
     }
 
+
     console.log(allTopic);
 
 
 
     res.render('index',{
-        title:title
+        title : title,
+        class_name : '',
+        id_number : '',
+        student_name : '',
+        allTopic : allTopic
     });
 };
 
