@@ -6,7 +6,7 @@
         <h1><%= title %></h1>
     </header>
 
-    <form action="/" autocomplete="off" method="post">
+    <form id="form" action="/" autocomplete="off" method="post">
 
     <%- include('partials/_informations') %>
 
@@ -20,9 +20,12 @@
 
     <%- include('partials/_subjective') %>
 
-    <button id="submit" class="btn btn-primary btn-block btn-lg">爽快的提交</button>
-
     </form>
 
+    <button id="submit" class="btn btn-primary btn-block btn-lg">爽快的提交</button>
+
 </div>
+
+<%- include('partials/_modal') %>
+
 <%- include('partials/_foot') %>
