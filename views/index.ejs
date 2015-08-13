@@ -33,7 +33,7 @@
                     <% for(var x =0;x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
                     <input type="text" name=<%= allTopic.fill_in_blanks[i].type + i %>
                             <% if(allTopic.fill_in_blanks[i].input) { %>
-                            value=<%= allTopic.fill_in_blanks[i].input[x] %>
+                            value=<%= Array.isArray(allTopic.fill_in_blanks[i].input)? allTopic.fill_in_blanks[i].input[x]: allTopic.fill_in_blanks[i].input %>
                             <% } %>>
                     <% } %>
                 </label>
