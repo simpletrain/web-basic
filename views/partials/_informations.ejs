@@ -1,16 +1,28 @@
 <section>
-    <section>
-        <ul>
-            <li>考试科目: <em>统一建模语言UML</em></li>
-            <li>时间: <em>100 分钟</em></li>
-            <li>得分：<%= score %></li>
-        </ul>
-    </section>
-    <section>
-        <ul>
-            <li><label>班级:<input type="text" name="class_name" value=<%= class_name %>></label></li>
-            <li><label>学号:<input type="text" name="id_number" value=<%= id_number %>></label></li>
-            <li><label>姓名:<input type="text" name="student_name" value=<%= student_name %>></label></li>
-        </ul>
+    <section class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-inline">
+                <div class="form-group col-lg-4">
+                    <label>考试科目：&nbsp;<em>统一建模语言UML</em></label>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label>时间：&nbsp;<em>100 分钟</em></label>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label>得分：&nbsp;<%= score %></label>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group col-lg-4">
+                    <label>班级：&nbsp;<input type="text" name="class_name" class="form-control" value=<%= class_name %>></label>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label>学号：&nbsp;<input type="text" name="id_number" class="form-control" value=<%= id_number %>></label>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label>姓名：&nbsp;<input type="text" name="student_name" class="form-control" value=<%= student_name %>></label>
+                </div>
+            </div>
+        </div>
     </section>
 </section>

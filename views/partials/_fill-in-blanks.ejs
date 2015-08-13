@@ -1,18 +1,23 @@
-<section>
-    <h3>一、填空题</h3>
-    <ol>
-        <% for(var i = 0;i < allTopic.fill_in_blanks.length; i++) { %>
-        <li>
-            <label >
-                <%= allTopic.fill_in_blanks[i].question %>
-                <% for(var x =0;x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
-                <input type="text" name=<%= allTopic.fill_in_blanks[i].type + i %>
-                <% if(allTopic.fill_in_blanks[i].input) { %>
-                value=<%= Array.isArray(allTopic.fill_in_blanks[i].input)? allTopic.fill_in_blanks[i].input[x]: allTopic.fill_in_blanks[i].input %>
-                        <% } %>>
-                <% } %>
-            </label>
-        </li>
-        <% } %>
-    </ol>
+<section class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">一、填空题</h3>
+    </div>
+    <div class="panel-body">
+        <ol>
+            <% for(var i = 0;i < allTopic.fill_in_blanks.length; i++) { %>
+            <li class="form-inline">
+                <label>
+                    <%= allTopic.fill_in_blanks[i].question %>
+                    <% for(var x = 0;x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
+                    <input type="text" class="form-control" name=<%= allTopic.fill_in_blanks[i].type + i %>
+                    <% if(allTopic.fill_in_blanks[i].input) { %>
+                    value=<%= Array.isArray(allTopic.fill_in_blanks[i].input) ? allTopic.fill_in_blanks[i].input[x] : allTopic.fill_in_blanks[i].input %>
+                            <% } %>
+                            >
+                    <% } %>
+                </label>
+            </li>
+            <% } %>
+        </ol>
+    </div>
 </section>

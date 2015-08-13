@@ -1,10 +1,12 @@
 <%- include('partials/_head') %>
 
-<header>
-    <h1><%= title %></h1>
-</header>
+<div class="container">
 
-<form action="/" autocomplete="off" method="post">
+    <header class="text-center">
+        <h1><%= title %></h1>
+    </header>
+
+    <form action="/" autocomplete="off" method="post">
 
     <%- include('partials/_informations') %>
 
@@ -18,8 +20,9 @@
 
     <%- include('partials/_subjective') %>
 
-    <input type="submit" value="爽快的提交"/>
+    <button id="submit" class="btn btn-primary btn-block btn-lg">爽快的提交</button>
 
-</form>
+    </form>
 
+</div>
 <%- include('partials/_foot') %>
