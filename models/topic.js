@@ -1,4 +1,4 @@
-function Topic(type,question,options,answer,score,input){
+function Topic(type, question, options, answer, score, input) {
     this.type = type;
     this.question = question;
     this.options = options;
@@ -6,6 +6,5 @@ function Topic(type,question,options,answer,score,input){
     this.score = score;
     this.input = input;
 }
-
 
 module.exports = Topic;

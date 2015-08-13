@@ -1,3 +1,3 @@
-exports.setRoutes = function(app) {
+exports.setRoutes = function (app) {
     app.use('/', require('./routers/home'));
 };
