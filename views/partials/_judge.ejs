@@ -1,0 +1,21 @@
+<section>
+    <h3>四 、判断题</h3>
+    <ol>
+        <% for(var i = 0;i < allTopic.judge.length; i++) { %>
+        <li>
+            <span><%= allTopic.judge[i].question %></span>
+            <% for(var choice in allTopic.judge[i].options) { %>
+            <label><input type="radio" name=<%= allTopic.judge[i].type + i %>
+                value=<%= choice %>
+                        <% if(allTopic.judge[i].input) { %>
+                        <% if(allTopic.judge[i].input === choice) { %>
+                          checked="checked"
+                        <% } %>
+                        <% } %>>
+                <%= allTopic.judge[i].options[choice] %>
+            </label>&nbsp;&nbsp;
+            <% } %>
+        </li>
+        <% } %>
+    </ol>
+</section>

@@ -6,120 +6,17 @@
 
 <form action="/" autocomplete="off" method="post">
 
-    <section>
-        <section>
-            <ul>
-                <li>考试科目: <em>统一建模语言UML</em></li>
-                <li>时间: <em>100 分钟</em></li>
-                <li>得分：<%= score %></li>
-            </ul>
-        </section>
-        <section>
-            <ul>
-                <li><label>班级:<input type="text" name="class_name" value=<%= class_name %>></label></li>
-                <li><label>学号:<input type="text" name="id_number" value=<%= id_number %>></label></li>
-                <li><label>姓名:<input type="text" name="student_name" value=<%= student_name %>></label></li>
-            </ul>
-        </section>
-    </section>
+    <%- include('partials/_informations') %>
 
-    <section>
-        <h3>一、填空题</h3>
-        <ol>
-            <% for(var i = 0;i < allTopic.fill_in_blanks.length; i++) { %>
-            <li>
-                <label >
-                    <%= allTopic.fill_in_blanks[i].question %>
-                    <% for(var x =0;x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
-                    <input type="text" name=<%= allTopic.fill_in_blanks[i].type + i %>
-                            <% if(allTopic.fill_in_blanks[i].input) { %>
-                            value=<%= Array.isArray(allTopic.fill_in_blanks[i].input)? allTopic.fill_in_blanks[i].input[x]: allTopic.fill_in_blanks[i].input %>
-                            <% } %>>
-                    <% } %>
-                </label>
-            </li>
-            <% } %>
-        </ol>
-    </section>
+    <%- include('partials/_fill-in-blanks') %>
 
-    <section>
-        <h3>二 、选择题</h3>
-        <ol>
-            <% for(var i = 0;i < allTopic.single_choice.length; i++) { %>
-            <li>
-                <p><%= allTopic.single_choice[i].question %></p>
-                <% for(var choice in allTopic.single_choice[i].options) { %>
-                <label><input type="radio" name=<%= allTopic.single_choice[i].type + i %>
-                            value=<%= choice %>
-                    <% if(allTopic.single_choice[i].input) { %>
-                           <% if(allTopic.single_choice[i].input === choice) { %>
-                            checked="checked"
-                           <% } %>
-                    <% } %>>
-                    (<%= choice %>)<%= allTopic.single_choice[i].options[choice] %>
-                </label><br/>
-                <% } %>
-            </li>
-            <% } %>
-        </ol>
-    </section>
+    <%- include('partials/_single-choice') %>
 
-    <section>
-        <h3>三 、多选题</h3>
-        <ol>
-            <% for(var i = 0;i < allTopic.multi_choice.length; i++) { %>
-            <li>
-                <p><%= allTopic.multi_choice[i].question %></p>
-                <% for(var choice in allTopic.multi_choice[i].options) { %>
-                <label><input type="checkbox" name=<%= allTopic.multi_choice[i].type + i %>
-                    value=<%= choice %>
-                    <% if(allTopic.multi_choice[i].input) { %>
-                    <% if(allTopic.multi_choice[i].input.indexOf(choice) !== -1) { %>
-                    checked="checked"
-                            <% } %>
-                            <% } %>>
-                    (<%= choice %>)<%= allTopic.multi_choice[i].options[choice] %>
-                </label><br/>
-                <% } %>
-            </li>
-            <% } %>
-        </ol>
-    </section>
+    <%- include('partials/_multi-choice') %>
 
-    <section>
-        <h3>四 、判断题</h3>
-        <ol>
-            <% for(var i = 0;i < allTopic.judge.length; i++) { %>
-            <li>
-                <span><%= allTopic.judge[i].question %></span>
-                <% for(var choice in allTopic.judge[i].options) { %>
-                <label><input type="radio" name=<%= allTopic.judge[i].type + i %>
-                    value=<%= choice %>
-                    <% if(allTopic.judge[i].input) { %>
-                    <% if(allTopic.judge[i].input === choice) { %>
-                    checked="checked"
-                            <% } %>
-                            <% } %>>
-                    <%= allTopic.judge[i].options[choice] %>
-                </label>&nbsp;&nbsp;
-                <% } %>
-            </li>
-            <% } %>
-        </ol>
-    </section>
+    <%- include('partials/_judge') %>
 
-    <section>
-        <h3>五 、简答题</h3>
-        <ol>
-            <% for(var i = 0;i < allTopic.subjective.length; i++) { %>
-            <li>
-                <p><%= allTopic.subjective[i].question %></p>
-                <textarea name=<%= allTopic.subjective[i].type + i %>
-                          cols="80" rows="10"><% if(allTopic.subjective[i].input) { %><%= allTopic.subjective[i].input %><% } %></textarea>
-            </li>
-            <% } %>
-        </ol>
-    </section>
+    <%- include('partials/_subjective') %>
 
     <input type="submit" value="爽快的提交"/>
 
