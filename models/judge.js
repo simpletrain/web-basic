@@ -8,7 +8,13 @@ Judge.prototype = Object.create(Topic.prototype);
 Judge.prototype.constructor = Judge;
 
 Judge.prototype.mark = function(){
-    return 0;
+    var score = 0;
+
+    if(this.input === this.answer){
+        score += this.score;
+    }
+
+    return score;
 };
 
 module.exports = Judge;
