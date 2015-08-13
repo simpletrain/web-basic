@@ -8,4 +8,6 @@ var homeController = new HomeController();
 
 router.get('/',homeController.firstCall);
 
+router.post('/',homeController.secondCall);
+
 module.exports = router;
