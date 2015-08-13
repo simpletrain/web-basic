@@ -1,0 +1,17 @@
+{
+  "name": "web-basic",
+  "version": "0.2.0",
+  "homepage": "https://github.com/simpletrain/web-basic",
+  "authors": [
+    "simpletrain <zsy498761554@live.com>"
+  ],
+  "description": "nope",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
