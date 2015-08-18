@@ -9,19 +9,19 @@ function TopicFactory() {
 }
 
 
-TopicFactory.prototype.factory = function (oneTopic) {
-    var type = oneTopic.type;
+TopicFactory.prototype.factory = function (topic) {
+    var type = topic.type;
 
     if (type === 'fill_in_blanks') {
-        return new FillInBlanks(oneTopic.question, oneTopic.options, oneTopic.answer, oneTopic.score, oneTopic.input);
+        return new FillInBlanks(topic.question, topic.options, topic.answer, topic.score, topic.input);
     } else if (type === 'single_choice') {
-        return new SingleChoice(oneTopic.question, oneTopic.options, oneTopic.answer, oneTopic.score, oneTopic.input);
+        return new SingleChoice(topic.question, topic.options, topic.answer, topic.score, topic.input);
     } else if (type === 'multi_choice') {
-        return new MultiChoice(oneTopic.question, oneTopic.options, oneTopic.answer, oneTopic.score, oneTopic.input);
+        return new MultiChoice(topic.question, topic.options, topic.answer, topic.score, topic.input);
     } else if (type === 'judge') {
-        return new Judge(oneTopic.question, oneTopic.options, oneTopic.answer, oneTopic.score, oneTopic.input);
+        return new Judge(topic.question, topic.options, topic.answer, topic.score, topic.input);
     } else if (type === 'subjective') {
-        return new Subjective(oneTopic.question, oneTopic.options, oneTopic.answer, oneTopic.score, oneTopic.input);
+        return new Subjective(topic.question, topic.options, topic.answer, topic.score, topic.input);
     }
 };
 
