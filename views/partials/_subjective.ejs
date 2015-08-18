@@ -4,11 +4,11 @@
     </div>
     <div class="panel-body">
     <ol>
-        <% for(var i = 0;i < allTopic.subjective.length; i++) { %>
+        <% for(var i = 0;i < topics.length; i++) { %>
         <li>
-            <p><%= allTopic.subjective[i].question %></p>
-                <textarea name=<%= allTopic.subjective[i].type + i %>
-                          cols="120" rows="8"><% if(allTopic.subjective[i].input) { %><%= allTopic.subjective[i].input %><% } %></textarea>
+            <p><%= topics[i].question %></p>
+                <textarea name=<%= topics[i].type + i %>
+                          cols="120" rows="8"><% if(topics[i].input) { %><%= topics[i].input %><% } %></textarea>
         </li>
         <% } %>
     </ol>

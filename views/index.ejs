@@ -3,22 +3,22 @@
 <div class="container">
 
     <header class="text-center">
-        <h1><%= title %></h1>
+        <h1>爽快的统一建模语言理论测试</h1>
     </header>
 
     <form id="form" action="/" autocomplete="off" method="post">
 
-    <%- include('partials/_informations') %>
+    <%- include('partials/_informations',{information:getInformation()}) %>
 
-    <%- include('partials/_fill-in-blanks') %>
+    <%- include('partials/_fill-in-blanks',{topics:getFillInBlanks()}) %>
 
-    <%- include('partials/_single-choice') %>
+    <%- include('partials/_single-choice',{topics:getSingleChoice()}) %>
 
-    <%- include('partials/_multi-choice') %>
+    <%- include('partials/_multi-choice',{topics:getMultiChoice()}) %>
 
-    <%- include('partials/_judge') %>
+    <%- include('partials/_judge',{topics:getJudge()}) %>
 
-    <%- include('partials/_subjective') %>
+    <%- include('partials/_subjective',{topics:getSubject()}) %>
 
     </form>
 

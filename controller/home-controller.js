@@ -1,48 +1,35 @@
 var data = require('../seed/data.json');
 var getInputs = require('../models/get-inputs');
 var Score = require('../models/score');
-var Helper = require('../models/view-helper');
+var Helper = require('../models/helper');
+var HomeViewModel = require('../view-model/home');
 
 function HomeController() {
 
 }
 
 HomeController.prototype.index = function (req, res) {
-    var title = data.title;
-
     var helper = new Helper();
     var allTopic = helper.getTopic(data);
 
-    res.render('index', {
-        title: title,
-        class_name: '',
-        id_number: '',
-        student_name: '',
-        allTopic: allTopic,
-        score: ''
-    });
+    var homeViewModel = new HomeViewModel(allTopic);
+
+
+    res.render('index', homeViewModel);
 };
 
 HomeController.prototype.submit = function (req, res) {
-    var title = data.title;
-
     var helper = new Helper();
     var allTopic = helper.getTopic(data);
 
-    var originInput = req.body;
-    allTopic = getInputs(originInput, allTopic);
+    allTopic = getInputs(req.body, allTopic);
 
     var score = new Score();
     score.markAll(allTopic);
 
-    res.render('index', {
-        title: title,
-        class_name: originInput.class_name,
-        id_number: originInput.id_number,
-        student_name: originInput.student_name,
-        allTopic: allTopic,
-        score: score.score
-    });
+    var homeViewModel = new HomeViewModel(allTopic,req.body,score.score);
+
+    res.render('index', homeViewModel);
 };
 
 

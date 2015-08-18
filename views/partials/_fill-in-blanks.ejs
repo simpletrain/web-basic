@@ -4,14 +4,14 @@
     </div>
     <div class="panel-body">
         <ol>
-            <% for(var i = 0;i < allTopic.fill_in_blanks.length; i++) { %>
+            <% for(var i = 0;i < topics.length; i++) { %>
             <li class="form-inline">
                 <label>
-                    <%= allTopic.fill_in_blanks[i].question %>
-                    <% for(var x = 0;x < allTopic.fill_in_blanks[i].answer.length; x++) { %>
-                    <input type="text" class="form-control" name=<%= allTopic.fill_in_blanks[i].type + i %>
-                    <% if(allTopic.fill_in_blanks[i].input) { %>
-                    value=<%= Array.isArray(allTopic.fill_in_blanks[i].input) ? allTopic.fill_in_blanks[i].input[x] : allTopic.fill_in_blanks[i].input %>
+                    <%= topics[i].question %>
+                    <% for(var x = 0;x < topics[i].answer.length; x++) { %>
+                    <input type="text" class="form-control" name=<%= topics[i].type + i %>
+                    <% if(topics[i].input) { %>
+                    value=<%= Array.isArray(topics[i].input) ? topics[i].input[x] : topics[i].input %>
                             <% } %>
                             >
                     <% } %>
