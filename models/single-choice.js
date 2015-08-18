@@ -8,13 +8,7 @@ SingleChoice.prototype = Object.create(Topic.prototype);
 SingleChoice.prototype.constructor = SingleChoice;
 
 SingleChoice.prototype.mark = function () {
-    var score = 0;
-
-    if (this.input === this.answer) {
-        score += this.score;
-    }
-
-    return score;
+    return this.input === this.answer ? this.score : 0;
 };
 
 

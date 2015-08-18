@@ -8,13 +8,7 @@ Subjective.prototype = Object.create(Topic.prototype);
 Subjective.prototype.constructor = Subjective;
 
 Subjective.prototype.mark = function () {
-    var score = 0;
-
-    if (this.input === this.answer) {
-        score += this.score;
-    }
-
-    return score;
+    return this.input === this.answer ? this.score : 0;
 };
 
 module.exports = Subjective;
