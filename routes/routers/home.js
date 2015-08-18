@@ -6,8 +6,8 @@ var data = require('../../seed/data.json');
 
 var homeController = new HomeController();
 
-router.get('/', homeController.firstCall);
+router.get('/', homeController.index);
 
-router.post('/', homeController.secondCall);
+router.post('/', homeController.submit);
 
 module.exports = router;

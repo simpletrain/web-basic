@@ -7,7 +7,7 @@ function HomeController() {
 
 }
 
-HomeController.prototype.firstCall = function (req, res) {
+HomeController.prototype.index = function (req, res) {
     var title = data.title;
 
     var helper = new Helper();
@@ -23,7 +23,7 @@ HomeController.prototype.firstCall = function (req, res) {
     });
 };
 
-HomeController.prototype.secondCall = function (req, res) {
+HomeController.prototype.submit = function (req, res) {
     var title = data.title;
 
     var helper = new Helper();
