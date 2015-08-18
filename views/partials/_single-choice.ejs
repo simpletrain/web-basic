@@ -7,15 +7,15 @@
         <% for(var i = 0;i < topics.length; i++) { %>
         <li>
             <p><%= topics[i].question %></p>
-            <% for(var choice in topics[i].options) { %>
+            <% for(var x = 0;x < topics[i].options.length; x++) { %>
             <label><input type="radio" name=<%= topics[i].type + i %>
-                value=<%= choice %>
+                value=<%= topics[i].options[x].value %>
                         <% if(topics[i].input) { %>
-                        <% if(topics[i].input === choice) { %>
+                        <% if(topics[i].input === topics[i].options[x].value) { %>
                           checked="checked"
                         <% } %>
                         <% } %>>
-                (<%= choice %>)<%= topics[i].options[choice] %>
+                (<%= topics[i].options[x].value %>)<%= topics[i].options[x].description %>
             </label><br/>
             <% } %>
         </li>

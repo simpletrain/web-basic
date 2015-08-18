@@ -3,7 +3,12 @@
     {
       "question": "UML的中文全称是:",
       "type": "fill_in_blanks",
-      "options": {},
+      "options": [
+        {
+          "value": "",
+          "description": ""
+        }
+      ],
       "answer": [
         "统一建模语言"
       ],
@@ -13,7 +18,20 @@
     {
       "question": "对象最突出的特征是:",
       "type": "fill_in_blanks",
-      "options": {},
+      "options": [
+        {
+          "value": "",
+          "description": ""
+        },
+        {
+          "value": "",
+          "description": ""
+        },
+        {
+          "value": "",
+          "description": ""
+        }
+      ],
       "answer": [
         "封装性",
         "继承性",
@@ -25,12 +43,23 @@
     {
       "question": "UML与软件工程的关系是:",
       "type": "single_choice",
-      "options": {
-        "A": "UML就是软件工程",
-        "B": "UML参与到软件工程中软件开发过UML",
-        "C": "UML与软件工程无关",
-        "D": "UML是软件工程的一部分"
-      },
+      "options": [
+        {
+          "value":"A",
+          "description": "UML 就是软件工程"
+        },
+        {
+          "value":"B",
+          "description": "UML 参与到软件工程中软件开发过程的几个阶段"
+        },
+        {
+          "value":"C",
+          "description": "UML 与软件工程无关"},
+        {
+          "value":"D",
+          "description": "UML 是软件工程的一部分"
+        }
+      ],
       "answer": "A",
       "score": 10,
       "input":""
@@ -38,12 +67,24 @@
     {
       "question": "Java 语言支持:",
       "type": "single_choice",
-      "options": {
-        "A": "单继承",
-        "B": "多继承",
-        "C": "单继承和多继承都支持",
-        "D": "继承和多继承都不支持"
-      },
+      "options":[
+        {
+          "value":"A",
+          "description": "单继承"
+        },
+        {
+          "value":"B",
+          "description":"多继承"
+        },
+        {
+          "value":"C",
+          "description":"单继承和多继承都支持"
+        },
+        {
+          "value":"D",
+          "description":"单继承和多继承都不支持"
+        }
+      ],
       "answer": "A",
       "score": 10,
       "input":""
@@ -51,12 +92,24 @@
     {
       "question": "用例的粒度分为以下哪三种。",
       "type": "multi_choice",
-      "options": {
-        "A": "概述级",
-        "B": "需求级",
-        "C": "用户目标级",
-        "D": "子功能级"
-      },
+      "options":[
+        {
+          "value":"A",
+          "description":"概述级"
+        },
+        {
+          "value":"B",
+          "description":"需求级"
+        },
+        {
+          "value":"C",
+          "description":"用户目标级"
+        },
+        {
+          "value":"D",
+          "description":"子功能级"
+        }
+      ],
       "answer": "ABD",
       "score": 10,
       "input":""
@@ -64,12 +117,24 @@
     {
       "question": "类图由以下哪三部分组成。",
       "type": "multi_choice",
-      "options": {
-        "A": "名称(input) ",
-        "B": "属性(Attribute)",
-        "C": "操作(Operation)",
-        "D": "方法(Function)"
-      },
+      "options": [
+        {
+          "value":"A",
+          "description":"名称(Name)"
+        },
+        {
+          "value":"B",
+          "description":"属性(Attribute)"
+        },
+        {
+          "value":"C",
+          "description":"操作(Operation)"
+        },
+        {
+          "value":"D",
+          "description":"方法(Function)"
+        }
+      ],
       "answer": "ABC",
       "score": 10,
       "input":""
@@ -77,10 +142,16 @@
     {
       "question": "用例图只是用于和客户交流和沟通的,用于确定需求。",
       "type": "judge",
-      "options": {
-        "true": "true",
-        "false": "false"
-      },
+      "options": [
+        {
+          "value":"true",
+          "description":"true"
+        },
+        {
+          "value":"false",
+          "description":"false"
+        }
+      ],
       "answer": "false",
       "score": 10,
       "input":""
@@ -88,10 +159,16 @@
     {
       "question": "在状态图中,终止状态在一个状态图中允许有任意多个。",
       "type": "judge",
-      "options": {
-        "true": "true",
-        "false": "false"
-      },
+      "options": [
+        {
+          "value":"true",
+          "description":"true"
+        },
+        {
+          "value":"false",
+          "description":"false"
+        }
+      ],
       "answer": "true",
       "score": 10,
       "input":""
@@ -99,7 +176,12 @@
     {
       "question": "简述什么是模型以及模型的表现形式?",
       "type": "subjective",
-      "options": {},
+      "options": [
+        {
+          "value":"",
+          "description":""
+        }
+      ],
       "answer": "模型是对现实世界的简化和抽象,模型是对所研究的系统、过程、事物或概念的一种表达形式。",
       "score": 20,
       "input":""

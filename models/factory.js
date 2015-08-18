@@ -9,20 +9,27 @@ function TopicFactory() {
 }
 
 
-TopicFactory.prototype.factory = function (topic) {
-    var type = topic.type;
+TopicFactory.prototype.factory = function (data) {
+    var type = data.type;
 
     if (type === 'fill_in_blanks') {
-        return new FillInBlanks(topic.question, topic.options, topic.answer, topic.score, topic.input);
+        topic = new FillInBlanks(data.question, data.answer, data.score, data.input);
+        topic.setOptions(data.options);
     } else if (type === 'single_choice') {
-        return new SingleChoice(topic.question, topic.options, topic.answer, topic.score, topic.input);
+        topic = new SingleChoice(data.question, data.answer, data.score, data.input);
+        topic.setOptions(data.options);
     } else if (type === 'multi_choice') {
-        return new MultiChoice(topic.question, topic.options, topic.answer, topic.score, topic.input);
+        topic = new MultiChoice(data.question, data.answer, data.score, data.input);
+        topic.setOptions(data.options);
     } else if (type === 'judge') {
-        return new Judge(topic.question, topic.options, topic.answer, topic.score, topic.input);
+        topic = new Judge(data.question, data.answer, data.score, data.input);
+        topic.setOptions(data.options);
     } else if (type === 'subjective') {
-        return new Subjective(topic.question, topic.options, topic.answer, topic.score, topic.input);
+        topic = new Subjective(data.question, data.answer, data.score, data.input);
+        topic.setOptions(data.options);
     }
+
+    return topic;
 };
 
 
